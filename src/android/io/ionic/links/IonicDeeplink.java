@@ -71,7 +71,7 @@ public class IonicDeeplink extends CordovaPlugin {
     Log.d(TAG, "Got a new intent: " + intentString + " " + intent.getScheme() + " " + action + " " + url);
 
     // if app was not launched by the url - ignore
-    if (!Intent.ACTION_VIEW.equals(action) || url == null) {
+    if (url == null) {
       return;
     }
 
